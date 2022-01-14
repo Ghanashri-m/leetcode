@@ -4,8 +4,8 @@
  * @return {number}
  */
 var minDistance = function(word1, word2) {    
-    // let matrix = Array(word1.length + 1).fill(Array(word2.length + 1).fill(0));
-    let matrix = Array.from({length:word1.length+1}, ()=>(Array.from({length:word2.length+1},()=>(0))))
+    // let matrix2 = Array(word1.length + 1).fill(Array(word2.length + 1).fill(0));
+    let matrix = Array.from({length:word1.length+1}, ()=>(Array.from({length:word2.length+1},()=>(0))));
     matrix[word1.length].forEach((e,i)=>{
         matrix[word1.length][i] = word2.length - i
     })
