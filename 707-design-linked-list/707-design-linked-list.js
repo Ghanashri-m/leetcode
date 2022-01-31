@@ -32,23 +32,37 @@ var Node = function(data, next = null) {
  * @return {number}
  */
 MyLinkedList.prototype.get = function(index) {
+    // if(!this.head || index < 0){
+    //     // If list is empty or index is a negative number.
+    //     return -1;
+    // }
+    // let count = 0;
+    // let ptr = this.head;
+    //     while(ptr && count < index){
+    //         // Go to that node in the index.
+    //         ptr = ptr.next;
+    //         count++;
+    //     }
+    //     if(ptr){
+    //         return ptr.data
+    //     }else{
+    //         // If index was higher than or equal to length of the list.
+    //         return -1;
+    //     }
     if(!this.head || index < 0){
         // If list is empty or index is a negative number.
         return -1;
     }
     let count = 0;
     let ptr = this.head;
-        while(ptr && count < index){
-            // Go to that node in the index.
-            ptr = ptr.next;
-            count++;
+     while(ptr) {
+        if (count === index) {
+          return ptr.data;
         }
-        if(ptr){
-            return ptr.data
-        }else{
-            // If index was higher than or equal to length of the list.
-            return -1;
-        }
+        count++;
+        ptr = ptr.next;
+     }
+  return -1;
 };
 
 MyLinkedList.prototype.getFirst = function() {
