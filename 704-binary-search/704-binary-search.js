@@ -41,6 +41,7 @@ var search = function(nums, target) {
         if (arr[mid]===x) return mid;
         if(arr[mid] > x)
             return recursiveFunction(arr, x, start, mid-1);
+        else
             return recursiveFunction(arr, x, mid+1, end);
     }
     return recursiveFunction(nums, target, 0, nums.length - 1);
