@@ -43,8 +43,7 @@ var middleNode = function(head) {
     }
     if (fast.next) {
         return slow.next;
-    } else {
-        return slow;
     }
+    return slow;
     
 };
