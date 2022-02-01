@@ -16,23 +16,35 @@ var middleNode = function(head) {
     if (!head.next) {
         return head;
     }
-    let size = 0;
-    let curr = head;
+//     let size = 0;
+//     let curr = head;
     
-    while (curr) {
-        size++;
-        curr = curr.next;
+//     while (curr) {
+//         size++;
+//         curr = curr.next;
+//     }
+    
+//     let counter = size % 2 === 0 ? (size/2) + 1 : Math.ceil(size/2);
+    
+//     let flag = 1;
+//     let prev = head;
+    
+//     while (flag < counter) {
+//         flag++;
+//         prev = prev.next;
+//     }
+//     return prev;
+    let slow = head;
+    let fast = head;
+    
+    while (fast.next && fast.next.next) {
+        slow = slow.next;
+        fast = fast.next.next;
     }
-    
-    let counter = size % 2 === 0 ? (size/2) + 1 : Math.ceil(size/2);
-    
-    let flag = 1;
-    let prev = head;
-    
-    while (flag < counter) {
-        flag++;
-        prev = prev.next;
+    if (fast.next) {
+        return slow.next;
+    } else {
+        return slow;
     }
-    return prev;
     
 };
