@@ -17,8 +17,7 @@ var getIntersectionNode = function(headA, headB) {
     
     let first = headA;
     let second = headB;
-    console.log("first", first);
-    console.log("second", second)
+
     while(first !== second) {
         if(!first){
             first = headB;
