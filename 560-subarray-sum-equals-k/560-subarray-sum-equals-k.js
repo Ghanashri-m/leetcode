@@ -14,13 +14,8 @@ var subarraySum = function(nums, k) {
         if(map.has(sum-k)){
            cnt += map.get(sum-k);
         }
-        map.set(sum, map.has(sum)?map.get(sum)+1 : 1);
-       
+        map.set(sum, map.has(sum) ? map.get(sum)+1 : 1);
     }
     return cnt;
+   
 };
-
-// logic, currentsum - k = value_in_map
-// currentsum = k + value_in_map
-
-// so if value_in_map is present, then k must hv occurred
