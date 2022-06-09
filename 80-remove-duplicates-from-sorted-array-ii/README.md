@@ -10,7 +10,7 @@
 
 <p>The judge will test your solution with the following code:</p>
 
-<pre>int[] nums = [...]; // Input array
+<pre style="position: relative;">int[] nums = [...]; // Input array
 int[] expectedNums = [...]; // The expected answer with correct length
 
 int k = removeDuplicates(nums); // Calls your implementation
@@ -19,26 +19,26 @@ assert k == expectedNums.length;
 for (int i = 0; i &lt; k; i++) {
     assert nums[i] == expectedNums[i];
 }
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>
 
 <p>&nbsp;</p>
 <p><strong>Example 1:</strong></p>
 
-<pre><strong>Input:</strong> nums = [1,1,1,2,2,3]
+<pre style="position: relative;"><strong>Input:</strong> nums = [1,1,1,2,2,3]
 <strong>Output:</strong> 5, nums = [1,1,2,2,3,_]
 <strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p><strong>Example 2:</strong></p>
 
-<pre><strong>Input:</strong> nums = [0,0,1,1,1,1,2,3,3]
+<pre style="position: relative;"><strong>Input:</strong> nums = [0,0,1,1,1,1,2,3,3]
 <strong>Output:</strong> 7, nums = [0,0,1,1,2,3,3,_,_]
 <strong>Explanation:</strong> Your function should return k = 7, with the first seven elements of nums being 0, 0, 1, 1, 2, 3 and 3 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
