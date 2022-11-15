@@ -4,17 +4,11 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    let storageHash = {};
-    let val = [];
-
+    const comp = {};
     for (let i = 0; i < nums.length; i++) {
-        let addend = target - nums[i];
-        if (addend in storageHash) {
-            val.push(storageHash[addend]);
-            val.push(i);
+        if (comp[nums[i]] >= 0) {
+            return [comp[nums[i]], i];
         }
-        storageHash[nums[i]] = i;
+        comp[target-nums[i]] = i;
     }
-    return val;
-    
 };
