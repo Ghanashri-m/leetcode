@@ -6,12 +6,14 @@ class Solution:
         boats = 0
         
         while light <= heavy:
+            if (light == heavy):
+                boats += 1
+                break
+
             if people[light] + people[heavy] <= limit:
                 light += 1
-                heavy -= 1
-                boats += 1
-            else:
-                boats += 1
-                heavy -= 1
+
+            heavy -= 1
+            boats += 1
         
         return boats
