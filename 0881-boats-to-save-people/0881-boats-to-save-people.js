@@ -9,14 +9,15 @@ var numRescueBoats = function(people, limit) {
     let heaviest = people.length - 1;
     let boats = 0;
     while (lightest <= heaviest) {
-        if (people[lightest] + people[heaviest] <= limit) {
-            boats++;
-            lightest++;
-            heaviest--;
-        } else {
-            boats++;
-            heaviest--;
+        if (lightest === heaviest) {
+          boats++;
+          break;    
         }
+        if (people[lightest] + people[heaviest] <= limit) {
+            lightest++;
+        } 
+        boats++;
+        heaviest--;
     }
     return boats;
 };
