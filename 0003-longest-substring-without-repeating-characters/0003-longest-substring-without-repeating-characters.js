@@ -15,7 +15,6 @@ var lengthOfLongestSubstring = function(s) {
     while (right < s.length && left < s.length) {
         if (s[right] in currString) {
             left = Math.max(left, currString[s[right]] + 1);
-            currString[s[right]] = right;
         }
         currString[s[right]] = right;
         maxLength = Math.max(maxLength, (right - left + 1));
